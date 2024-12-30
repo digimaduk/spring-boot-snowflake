@@ -1,0 +1,35 @@
+{
+  "name": "car",
+  "table": "T_CAR",
+  "fields": [
+    {
+      "property": "id",
+      "column": "CAR_ID",
+      "isRequired": true
+    },
+    {
+      "property": "name",
+      "column": "CAR_NAME"
+    },
+    {
+      "property": "model",
+      "column": "CAR_MODEL"
+    },
+    {
+      "property": "year",
+      "column": "CAR_MAKE_YEAR"
+    },
+    {
+      "property": "numberPlate",
+      "column": "NUMBER_PLATE"
+    }
+  ],
+  "conditions": [
+    {
+      "property": "name",
+      "column": "CAR_NAME",
+      "table": "T_CAR",
+      "operator": "="
+    }
+  ]
+}
