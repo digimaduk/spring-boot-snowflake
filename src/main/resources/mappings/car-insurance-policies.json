@@ -1,0 +1,39 @@
+{
+  "name": "car-insurance-policies",
+  "table": "T_CAR_INSURANCE_POLICIES",
+  "fields": [
+    {
+      "property": "id",
+      "column": "POLICY_ID",
+      "isRequired": true
+    },
+    {
+      "property": "carId",
+      "column": "CAR_ID"
+    },
+    {
+      "property": "policyNum",
+      "column": "POLICY_NUM"
+    },
+    {
+      "property": "provider",
+      "column": "PROVIDER"
+    },
+    {
+      "property": "startDt",
+      "column": "START_DT"
+    },
+    {
+      "property": "endDt",
+      "column": "END_DT"
+    }
+  ],
+  "conditions": [
+    {
+      "property": "carId",
+      "column": "CAR_ID",
+      "table": "T_CAR_INSURANCE_POLICIES",
+      "operator": "="
+    }
+  ]
+}

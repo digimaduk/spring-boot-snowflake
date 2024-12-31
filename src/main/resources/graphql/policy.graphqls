@@ -1,0 +1,8 @@
+type Policy {
+    id: ID!
+    carId: Int
+    policyNum: String
+    provider: String
+    startDt: String
+    endDt: String
+}

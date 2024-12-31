@@ -30,6 +30,12 @@
       "column": "CAR_NAME",
       "table": "T_CAR",
       "operator": "="
+    },
+    {
+      "property": "year",
+      "column": "CAR_MAKE_YEAR",
+      "table": "T_CAR",
+      "operator": "="
     }
   ]
 }

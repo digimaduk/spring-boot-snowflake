@@ -1,4 +1,5 @@
 type Query {
     findCarById(id: ID): Car
     findCarByName(name: String): Car
+    findCarByYear(year: Int): [Car]
 }

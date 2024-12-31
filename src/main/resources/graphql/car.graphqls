@@ -4,4 +4,6 @@ type Car {
     model: String
     year: Int
     numberPlate: String
+    policy: Policy
+    accidents: [Accident]
 }

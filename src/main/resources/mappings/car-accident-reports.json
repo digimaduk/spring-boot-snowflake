@@ -1,0 +1,42 @@
+{
+  "name": "car-accident-reports",
+  "table": "T_CAR_DAMAGE_REPORTS",
+  "fields": [
+    {
+      "property": "id",
+      "column": "REPORT_ID",
+      "isRequired": true
+    },
+    {
+      "property": "accidentId",
+      "column": "ACCIDENT_ID"
+    },
+    {
+      "property": "reportDt",
+      "column": "REPORT_DT"
+    },
+    {
+      "property": "description",
+      "column": "DESCRIPTION"
+    },
+    {
+      "property": "estimatedCost",
+      "column": "ESTIMATED_COST"
+    }
+  ],
+  "conditions": [
+    {
+      "property": "name",
+      "column": "CAR_NAME",
+      "table": "T_CAR",
+      "operator": "="
+    },
+    {
+      "property": "accidentId",
+      "column": "ACCIDENT_ID",
+      "table": "T_CAR_DAMAGE_REPORTS",
+      "operator": "IN",
+      "valueInSet": true
+    }
+  ]
+}

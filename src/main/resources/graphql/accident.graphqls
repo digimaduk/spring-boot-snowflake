@@ -1,0 +1,8 @@
+type Accident {
+    id: ID!
+    carId: Int
+    description: String
+    damageCost: String
+    accidentDt: String
+    report : Report
+}

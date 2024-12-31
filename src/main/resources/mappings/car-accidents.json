@@ -1,0 +1,35 @@
+{
+  "name": "car-accidents",
+  "table": "T_CAR_ACCIDENTS",
+  "fields": [
+    {
+      "property": "id",
+      "column": "ACCIDENT_ID",
+      "isRequired": true
+    },
+    {
+      "property": "carId",
+      "column": "CAR_ID"
+    },
+    {
+      "property": "description",
+      "column": "DESCRIPTION"
+    },
+    {
+      "property": "damageCost",
+      "column": "DAMAGE_COST"
+    },
+    {
+      "property": "accidentDt",
+      "column": "ACCIDENT_DT"
+    }
+  ],
+  "conditions": [
+    {
+      "property": "carId",
+      "column": "CAR_ID",
+      "table": "T_CAR_ACCIDENTS",
+      "operator": "="
+    }
+  ]
+}

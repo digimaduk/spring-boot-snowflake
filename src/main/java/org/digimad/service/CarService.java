@@ -1,6 +1,7 @@
 package org.digimad.service;
 
 import graphql.schema.DataFetchingEnvironment;
+import lombok.extern.slf4j.Slf4j;
 import org.digimad.builder.QueryBuilder;
 import org.digimad.entity.Car;
 import org.digimad.repository.CarRepository;
@@ -18,6 +19,7 @@ import java.util.Map;
 import java.util.Set;
 
 @Service
+@Slf4j
 public class CarService {
 
     CarRepository carRepository;
@@ -59,5 +61,13 @@ public class CarService {
         car.setCarId(resultSet.getInt("CAR_ID"));
         car.setName(resultSet.getString("CAR_NAME"));
         return car;
+    }
+
+    public List<Map<String, Object>> getCarByYear(Long year, DataFetchingEnvironment environment) {
+        String sql = queryBuilder.buildDynamicQuery("car", environment.getSelectionSet().getFields(), Set.of("year"));
+        log.info("sql ==> {}", sql);
+        SqlParameterSource param = new MapSqlParameterSource().addValue("year", year);
+        List<Map<String, Object>> carList = jdbcTemplate.queryForList(sql, param);
+        return carList;
     }
 }

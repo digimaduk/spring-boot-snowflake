@@ -1,0 +1,7 @@
+type Report {
+    id: ID!
+    accidentId: Int
+    reportDt: String
+    description: String
+    estimatedCost: String
+}
